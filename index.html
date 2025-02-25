@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Tajawal', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6c63ff;
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: #6c63ff;
+            border-radius: 2px;
+        }
+
+        .faq-item {
+            background: #2d2d2d;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid #3d3d3d;
+        }
+
+        .question {
+            color: #e0e0e0;
+            font-size: 1em;
+            font-weight: 600;
+            padding: 18px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .question i {
+            color: #6c63ff;
+            font-size: 1.1em;
+            min-width: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .answer {
+            color: #b0b0b0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            padding: 0 15px 15px 15px;
+            display: none;
+            border-top: 1px solid #3d3d3d;
+        }
+
+        .answer.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .answer ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .answer li {
+            padding: 8px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .answer li::before {
+            content: "•";
+            color: #6c63ff;
+            font-size: 1.3em;
+            line-height: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .faq-container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+                margin-bottom: 35px;
+            }
+            
+            .question {
+                font-size: 0.95em;
+                padding: 15px 12px;
+                gap: 10px;
+            }
+            
+            .answer {
+                font-size: 0.9em;
+                padding: 0 12px 12px 12px;
+            }
+            
+            .question i {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>الأسئلة الشائعة</h1>
+        
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-shipping-fast"></i>
+                كم مدة الشحن ؟
+            </div>
+            <div class="answer">10-15 يوم</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-coins"></i>
+                بأي عملة نتعامل ؟
+            </div>
+            <div class="answer">الريال السعودي</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-calculator"></i>
+                شلون احسب سعر المنتجات؟
+            </div>
+            <div class="answer">موفرين الكم موقع خاص لحساب سعر المنتجات</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-truck"></i>
+                هل الشحن مجاني ؟
+            </div>
+            <div class="answer">نعم الشحن مجاني</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-money-bill-wave"></i>
+                كم تكلفة التوصيل؟
+            </div>
+            <div class="answer">
+                <p>الناصرية 3,000 دينار عراقي</p>
+                <p>جميع المحافظات 5,000 دينار عراقي</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-hand-holding-usd"></i>
+                كم العربون ؟
+            </div>
+            <div class="answer">
+                <ul>
+                    <li>اذا كان سعر الطلب اقل من 50,000 الف فيكون العربون 5,000</li>
+                    <li>واذا كان سعر الطلب اقل من 100,000 سيكون 10,000 دينار عراقي</li>
+                    <li>واذا كان الطلب اكبر من 100,000 فكل 100,000 عربونها 25,000</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-exclamation-triangle"></i>
+                اذا تم فقد قطعة اثناء الشحن فمن يتحمل الخسارة؟
+            </div>
+            <div class="answer">
+                <p>بالطبع نحن وسيتم ارجاع اموالك بنفس اليوم</p>
+                <p>او اذا كنت تريد اعادة طلب نفس القطعة</p>
+            </div>
+        </div>
+
+        <!-- السؤال المضاف حديثًا -->
+        <div class="faq-item">
+            <div class="question">
+                <i class="fas fa-percent"></i>
+                هل الخصومات تحسب ؟
+            </div>
+            <div class="answer">نعم</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('show');
+                icon.style.transform = answer.classList.contains('show') 
+                    ? 'rotate(180deg)' 
+                    : 'rotate(0deg)';
+                
+                // Close other answers
+                document.querySelectorAll('.answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.classList.remove('show');
+                        otherAnswer.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
